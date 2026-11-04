@@ -1,7 +1,5 @@
 Sahayog – Connecting Donors with Verified NGOs
-
 Sahayog is a digital donation platform that connects donors with trusted Non‑Governmental Organizations (NGOs). The platform makes giving easy and clear by letting NGOs sign up donors view their profiles and administrators confirm NGOs before they appear online.
-
 The project builds a digital space where donors can find groups working on various social causes.
 
 # Project Objectives
@@ -55,8 +53,5 @@ Sahayog uses a client‑server model.
 3. Database: MySQL holds user accounts NGO data and other application information.
 
 4. Admin Module:  Manages NGO verification and other admin tasks.
-
-
 * Create a MySQL database.
-
 * Set up the database connection us
