@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register — Sahayog</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="mark">S</span>Sahayog</a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="ngos.html">Find NGOs</a>
+      <a href="register.html" class="active">Register your NGO</a>
+      <a href="login.html">Log in</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="form-shell wide">
+      <h2>Register</h2>
+      <p class="sub">Set up an account as a donor, or submit your NGO for review.</p>
+
+      <div class="tabs" data-group="register">
+        <button class="active" data-tab="donor">Donor</button>
+        <button data-tab="ngo">NGO</button>
+      </div>
+
+      <form data-validate data-success-message="Account created — you can log in now." novalidate
+            data-panel="donor" data-panel-group="register">
+        <div class="alert"></div>
+        <div class="field-row">
+          <div class="field"><label for="d-name">Full name</label><input type="text" id="d-name" required><p class="error-text">Enter your name.</p></div>
+          <div class="field"><label for="d-phone">Phone number</label><input type="tel" id="d-phone" placeholder="+91"></div>
+        </div>
+        <div class="field"><label for="d-email">Email</label><input type="email" id="d-email" required><p class="error-text">Enter a valid email.</p></div>
+
+        <div class="field"><label for="d-pass">Password</label><input type="password" id="d-pass" required><p class="error-text">Choose a password.</p></div>
+
+        <button type="submit" class="btn primary block">Create donor account</button>
+      </form>
+
+      <form data-validate data-success-message="NGO application submitted — an admin will review it before your profile goes live." novalidate
+            data-panel="ngo" data-panel-group="register" style="display:none">
+        <div class="alert"></div>
+
+        <p class="eyebrow" style="margin-top:4px">Organisation details</p>
+        <div class="field"><label for="n-name">NGO name</label><input type="text" id="n-name" required><p class="error-text">Enter the NGO's name.</p></div>
+
+        <div class="field-row">
+          <div class="field"><label for="n-reg">Registration number</label><input type="text" id="n-reg" required><p class="error-text">Required.</p></div>
+
+          <div class="field"><label for="n-darpan">NGO-DARPAN ID</label><input type="text" id="n-darpan" required><p class="error-text">Required.</p></div>
+        </div>
+
+        <div class="field"><label for="n-address">Registered address</label><input type="text" id="n-address" required><p class="error-text">Required.</p></div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="n-cause">Primary cause</label>
+            <select id="n-cause">
+              <option>Education</option><option>Healthcare</option><option>Environment</option><option>Community Welfare</option>
+            </select>
+          </div>
+          <div class="field"><label for="n-city">City</label><input type="text" id="n-city" value="Pune"></div>
+        </div>
+        <div class="field"><label for="n-desc">Describe your work</label><textarea id="n-desc" rows="3" required></textarea><p class="error-text">Tell us what your NGO does.</p></div>
+
+        <p class="eyebrow" style="margin-top:20px">Contact &amp; banking</p>
+        <div class="field-row">
+
+          <div class="field"><label for="n-email">Contact email</label><input type="email" id="n-email" required><p class="error-text">Required.</p></div>
+
+         
+          <div class="field"><label for="n-phone">Contact phone</label><input type="tel" id="n-phone" required><p class="error-text">Required.</p></div>
+        </div>
+         <div class ="field">
+            <label for="n-pass">Password</label>
+            <input type="password" id="n-pass" required>
+            <p class="error-text">Choose a password.</p>
+          </div>
+        <div class="field">
+          <label for="n-website"> Official Website </label>
+          <input
+          id="n-website"
+          type="url"
+          placeholder="https://example.org">
+        </div>
+        <!--
+        <div class="field"><label for="n-bank">Bank account details</label><input type="text" id="n-bank" placeholder="Account number, IFSC" required><p class="error-text">Required for donation payouts.</p></div>
+        <div class="field"><label for="n-link">Website or social media link (optional)</label><input type="text" id="n-link"></div>
+      -->
+        <p class="eyebrow" style="margin-top:20px">Supporting documents</p>
+        <div class="field">
+          <label>Registration certificate &amp; supporting documents</label>
+          <div class="file-drop">Drag files here, or click to upload (PDF/JPG — demo only, not stored)</div>
+        </div>
+    
+        <label style="display:flex;gap:8px;align-items:flex-start;font-size:13.5px;color:var(--text-soft);margin-bottom:22px">
+          <input type="checkbox" required style="width:auto;margin-top:3px"> I confirm this information is accurate and understand it will be reviewed by an administrator before approval.
+        </label>
+
+        <button type="submit" class="btn dark block">Submit for verification</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><p class="legal">Sahayog is a final-year academic project. This registration form is a front-end demo — nothing is stored or transmitted.</p></div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

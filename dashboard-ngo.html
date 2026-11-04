@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NGO Dashboard — Sahayog</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="mark">S</span>Sahayog</a>
+    <nav class="main-nav"><a href="index.html">Home</a><a href="ngos.html">Find NGOs</a></nav>
+    <div class="nav-actions"><a class="btn ghost small" href="login.html">Log out</a><button class="menu-toggle" aria-label="Menu">&#9776;</button></div>
+  </div>
+</header>
+
+<div class="dash-shell">
+  <aside class="dash-side">
+    <p class="who">---<br><span class="badge" style="margin-top:4px">Verified</span></p>
+    <a class="active" href="dashboard-ngo.html">Overview</a>
+    <a href="dashboard-ngo.html">My campaigns</a>
+    <a href="register.html">Organisation profile</a>
+    <a href="login.html">Log out</a>
+  </aside>
+  <main class="dash-main">
+    <div class="section-head" style="margin-bottom:24px">
+      <p class="eyebrow">NGO dashboard</p>
+      <h2 style="font-size:28px">---</h2>
+    </div>
+
+    <div class="kpi-row">
+      <div class="kpi"><div class="num">&#8377;89,000</div><div class="label">Raised across all campaigns</div></div>
+      <div class="kpi"><div class="num">2</div><div class="label">Live campaigns</div></div>
+      <div class="kpi"><div class="num">61</div><div class="label">Donors reached</div></div>
+    </div>
+
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+      <p class="eyebrow" style="margin:0">My campaigns</p>
+      <button class="btn dark small" onclick="document.getElementById('new-campaign').style.display='block'">New campaign</button>
+    </div>
+    <table class="data-table" style="margin-bottom:32px">
+      <thead><tr><th>Campaign</th><th>Raised</th><th>Goal</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Winter school kits for 200 children</td><td>&#8377;68,000</td><td>&#8377;1,20,000</td><td><span class="badge">Live</span></td></tr>
+        <tr><td>Library corner </td><td>&#8377;21,000</td><td>&#8377;40,000</td><td><span class="badge">Live</span></td></tr>
+        <tr><td>Summer reading drive 2025</td><td>&#8377;38,500</td><td>&#8377;38,500</td><td><span class="badge muted">Closed</span></td></tr>
+      </tbody>
+    </table>
+
+    <div class="form-shell" id="new-campaign" style="display:none;margin:0">
+      <h2 style="font-size:20px">Create a new campaign</h2>
+      <p class="sub">This goes live once submitted &mdash; no additional admin review needed for approved NGOs.</p>
+      <form data-validate data-success-message="Campaign created and now visible to donors." novalidate>
+        <div class="alert"></div>
+        <div class="field"><label for="c-title">Campaign title</label><input type="text" id="c-title" required><p class="error-text">Required.</p></div>
+        <div class="field-row">
+          <div class="field"><label for="c-goal">Goal amount (&#8377;)</label><input type="number" id="c-goal" required><p class="error-text">Required.</p></div>
+          <div class="field"><label for="c-cause">Category</label><select id="c-cause"><option>Education</option><option>Healthcare</option><option>Environment</option></select></div>
+        </div>
+        <div class="field"><label for="c-desc">Description</label><textarea id="c-desc" rows="3" required></textarea><p class="error-text">Tell donors what this campaign is for.</p></div>
+        <button type="submit" class="btn primary block">Publish campaign</button>
+      </form>
+    </div>
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

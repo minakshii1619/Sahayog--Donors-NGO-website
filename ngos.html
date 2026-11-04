@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Find NGOs — Sahayog</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="mark">S</span>Sahayog</a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="ngos.html" class="active">Find NGOs</a>
+      <a href="register.html">Register your NGO</a>
+      <a href="login.html">Log in</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn ghost small" href="login.html">Log in</a>
+      <a class="btn primary small" href="ngos.html">Donate now</a>
+      <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<section style="padding-bottom:32px">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Directory</p>
+      <h2>Verified NGOs in Pune</h2>
+      <p>Search by name, or filter by cause. NGOs marked "Pending review" are still going through admin verification.</p>
+    </div>
+    <div class="search-row">
+      <input type="text" id="ngo-search" placeholder="Search NGOs by name or work, e.g. 'education'">
+    </div>
+    <div class="pill-filters">
+      <button data-cause="All" class="active">All causes</button>
+      <button data-cause="Education">Education</button>
+      <button data-cause="Healthcare">Healthcare</button>
+      <button data-cause="Environment">Environment</button>
+      <button data-cause="Community Welfare">Community Welfare</button>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="ledger" id="ngo-list"><!-- populated by js/main.js --></div>
+    <p class="empty-note" id="empty-note">No NGOs match that search. Try a different cause or keyword.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div class="col">
+        <h5>Platform</h5>
+        <a href="ngos.html">Find NGOs</a>
+        <a href="register.html">Register an NGO</a>
+        <a href="login.html">Log in</a>
+      </div>
+      <div class="col">
+        <h5>Account</h5>
+        <a href="dashboard-donor.html">Donor dashboard</a>
+        <a href="dashboard-ngo.html">NGO dashboard</a>
+        <a href="dashboard-admin.html">Admin panel</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap"><p class="legal">Sahayog is a final-year academic project — test payment gateway, no real donations processed.</p></div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

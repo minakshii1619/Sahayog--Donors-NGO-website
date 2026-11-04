@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donor Dashboard — Sahayog</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="mark">S</span>Sahayog</a>
+    <nav class="main-nav"><a href="index.html">Home</a><a href="ngos.html">Find NGOs</a></nav>
+    <div class="nav-actions"><a class="btn ghost small" href="login.html">Log out</a><button class="menu-toggle" aria-label="Menu">&#9776;</button></div>
+  </div>
+</header>
+
+<div class="dash-shell">
+  <aside class="dash-side">
+    <p class="who">Minakshi Singh<br><span style="font-size:12px">Donor account</span></p>
+    <a class="active" href="dashboard-donor.html">Overview</a>
+    <a href="ngos.html">Find NGOs</a>
+    <a href="login.html">Profile settings</a>
+    <a href="login.html">Log out</a>
+  </aside>
+  <main class="dash-main">
+    <div class="section-head" style="margin-bottom:24px">
+      <p class="eyebrow">Donor dashboard</p>
+      <h2 style="font-size:28px">Welcome back, Minakshi</h2>
+    </div>
+
+    <div class="kpi-row">
+      <div class="kpi"><div class="num">&#8377;4,200</div><div class="label">Total donated</div></div>
+      <div class="kpi"><div class="num">3</div><div class="label">NGOs supported</div></div>
+      <div class="kpi"><div class="num">5</div><div class="label">Receipts on file</div></div>
+    </div>
+
+    <p class="eyebrow">Donation history</p>
+    <table class="data-table">
+      <thead><tr><th>Date</th><th>NGO / Campaign</th><th>Amount</th><th>Receipt</th></tr></thead>
+      <tbody>
+        <tr><td>02 Sep 2026</td><td>--- &mdash; Winter school kits</td><td>&#8377;1,000</td><td><a href="#" style="text-decoration:underline">SBY-482910</a></td></tr>
+        <tr><td>21 Aug 2026</td><td>--- &mdash; Mobile clinic</td><td>&#8377;2,000</td><td><a href="#" style="text-decoration:underline">SBY-471102</a></td></tr>
+        <tr><td>05 Aug 2026</td><td>--- &mdash; Warje saplings</td><td>&#8377;500</td><td><a href="#" style="text-decoration:underline">SBY-460337</a></td></tr>
+        <tr><td>19 Jul 2026</td><td>--- &mdash; Sewing machines</td><td>&#8377;700</td><td><a href="#" style="text-decoration:underline">SBY-449021</a></td></tr>
+      </tbody>
+    </table>
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

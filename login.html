@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log in — Sahayog</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="mark">S</span>Sahayog</a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="ngos.html">Find NGOs</a>
+      <a href="register.html">Register your NGO</a>
+      <a href="login.html" class="active">Log in</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="form-shell">
+      <h2>Log in</h2>
+      <p class="sub">Choose your account type to continue.</p>
+
+      <div class="tabs" data-group="login">
+        <button class="active" data-tab="donor">Donor</button>
+        <button data-tab="ngo">NGO</button>
+        <button data-tab="admin">Admin</button>
+      </div>
+
+      <form data-validate data-success-message="Logged in — redirecting to your dashboard." novalidate
+            data-panel="donor" data-panel-group="login" autocomplete="off">
+        <div class="alert"></div>
+        <div class="field"><label for="donor-email-login">Email</label><input type="email" id="donor-email-login" required><p class="error-text">Enter your email.</p></div>
+        <div class="field"><label for="donor-pass">Password</label><input type="password" id="donor-pass" required><p class="error-text">Enter your password.</p></div>
+        <button type="submit" class="btn primary block">Log in as donor</button>
+        <p class="sub" style="text-align:center;margin-top:16px">New here? <a href="register.html" style="color:var(--ink);text-decoration:underline">Create a donor account</a></p>
+      </form>
+
+      <form data-validate data-success-message="Logged in — redirecting to your NGO dashboard." novalidate
+            data-panel="ngo" data-panel-group="login" style="display:none">
+        <div class="alert"></div>
+        <div class="field"><label for="ngo-email-login">Registered email</label><input type="email" id="ngo-email-login" required><p class="error-text">Enter your registered email.</p></div>
+        <div class="field"><label for="ngo-pass">Password</label><input type="password" id="ngo-pass" required><p class="error-text">Enter your password.</p></div>
+        <button type="submit" class="btn primary block">Log in as NGO</button>
+        <p class="sub" style="text-align:center;margin-top:16px">Not registered yet? <a href="register.html" style="color:var(--ink);text-decoration:underline">Register your NGO</a></p>
+      </form>
+
+      <form data-validate data-success-message="Logged in — redirecting to the admin panel." novalidate
+            data-panel="admin" data-panel-group="login" style="display:none">
+        <div class="alert"></div>
+        <div class="field"><label for="admin-email-login">Admin email</label><input type="email" id="admin-email-login" required><p class="error-text">Enter your admin email.</p></div>
+        <div class="field"><label for="admin-pass">Password</label><input type="password" id="admin-pass" required><p class="error-text">Enter your password.</p></div>
+        <button type="submit" class="btn dark block">Log in as admin</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
