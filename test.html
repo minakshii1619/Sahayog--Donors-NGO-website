@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test NGO registration</title>
+</head>
+<body>
+  <h1> TEst Ngo registration</h1>
+  <button onclick="registerNGO()"> Register NGO</button>
+  <script>
+    function registerNGO(){
+      const ngoData={
+        ngo_name:"Sahayog foundation",
+        registration_number:"REG003",
+        darpan_id: "DARPAN003",
+        address: "Pune, Maharastra",
+        cause:"Education",
+        city:"Pune",
+        description:"Helping students with education",
+        email:"sahayog@gmail.com",
+        phone:"2345678921"
+      };
+      console.log("DATA BEING SENT:",ngoData);
+      fetch("http://localhost:5000/api/ngos/register",{
+        method:"POST",
+        headers:{
+          "Content-Type":"application/json"
+        },
+        body:JSON.stringify(ngoData)
+      })
+      .then(response => response.json())
+      .then(data=>{
+        console.log(data);
+      })
+      .catch(error => {
+        console.log("Error:", error);
+      });
+    }
+  </script>
+  
+</body>
+</html>
